@@ -16,23 +16,15 @@ def main():
             password = encode(password)
             print('Your password has been encoded and stored!')
         elif option == 2:
-            print(f'The encoded password is {password}, and the original password is {decode(password)}')
+            print(f'The encoded password is {password}, and the original password is {decode(password)}.')
         elif option == 3:
-            False
+            break
         else:
             print('Please input a valid option')
         
 
 def encode(password):
-    encoded_password = []
-    for num in password:
-        num = int(num)
-        num += 3
-        if num >= 10:
-            num-= 10
-        encoded_password.append(str(num))
-    encoded_password = ''.join(encoded_password)
-    return encoded_password
+    return ''.join(str((int(digit)+3)% 10) for digit in password)
 
 
 def decode(string):

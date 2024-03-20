@@ -6,7 +6,10 @@ def main():
         print('2. Decode')
         print('3. Quit')
         print()
-        option = int(input('Please enter an option: '))
+        try:
+            option = int(input('Please enter an option: '))
+        except:
+            print('Please input a valid option')
 
         if option == 1:
             password = input('Please enter your password to encode: ')
@@ -17,7 +20,7 @@ def main():
         elif option == 3:
             False
         else:
-            print('Invalid option')
+            print('Please input a valid option')
         
 
 def encode(password):

@@ -1,7 +1,7 @@
 #Conner Layne
 def main():
     while True:
-        print('Menu')
+        print('\nMenu')
         print('-------------')
         print('1. Encode')
         print('2. Decode')
@@ -25,11 +25,17 @@ def main():
         
 
 def encode(password):
-    return ''.join(str((int(digit)+3)% 10) for digit in password)
+    return ''.join(str((int(digit) + 3)% 10) for digit in password)
 
-#Justin Wild
-def decode(string):
-    return ''.join(str((int(digit) - 3) % 10) for digit in string)
+
+# Yazan Al-Hawamdeh
+def decode(encoded_password):
+    decoded_password = ""
+    for digit in encoded_password:
+        decoded_digit = (int(digit) - 3) % 10
+        decoded_password += str(decoded_digit)
+    return decoded_password
+
 
 if __name__ == '__main__':
     main()

@@ -36,7 +36,7 @@ def encode(password):
 
 
 def decode(string):
-    pass
+    return ''.join(str((int(digit) - 3) % 10) for digit in string)
 
 if __name__ == '__main__':
     main()

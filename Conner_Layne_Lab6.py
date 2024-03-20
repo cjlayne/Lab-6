@@ -1,3 +1,4 @@
+#Conner Layne
 def main():
     while True:
         print('Menu')
@@ -26,7 +27,7 @@ def main():
 def encode(password):
     return ''.join(str((int(digit)+3)% 10) for digit in password)
 
-
+#Justin Wild
 def decode(string):
     return ''.join(str((int(digit) - 3) % 10) for digit in string)
 
